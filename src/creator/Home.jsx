@@ -5,10 +5,9 @@ import Navbar from './Navbar';
 
 export default function Home() {
   return (
-    <>
-    <Navbar/>
-
+    <div id='home'>
       <StyledHome>
+        <Navbar className='navbar'/>
         <div className="main_container">
           <div className="hero_content">
             <h2>
@@ -25,19 +24,29 @@ export default function Home() {
           </div>
         </div>
       </StyledHome>
-    </>
+    </div>
   );
 }
 
 const StyledHome = styled.div`
   /* width: var(--section-width); */
-  margin: var(--section-margin) auto var(--section-margin) auto;
+  /* margin: var(--section-margin) auto var(--section-margin) auto; */
+  position: relative;
+  .navbar {
+    width: 50%; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
   .main_container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
+    position: relative;
 
     .hero_content {
       display: flex;
@@ -47,6 +56,7 @@ const StyledHome = styled.div`
       gap: 1rem;
       flex-direction: column;
       padding-left: 5%;
+      /* margin-top: 5%; */
       h2 {
         line-height: 2.5rem;
       }
@@ -64,16 +74,22 @@ const StyledHome = styled.div`
       img {
         /* max-width: 800px; */
         width: 100%;
-        height: auto;
-        clip-path: polygon(67% 0, 100% 0, 100% 100%, 15% 100%);
+        /* height: auto; */
+        height: 500px;
+        /* clip-path: polygon(67% 0, 100% 0, 100% 100%, 15% 100%); */
+        clip-path: polygon(51% 0, 100% 0, 100% 100%, 14% 100%);
       }
     }
   }
 
   @media (max-width: 640px) {
+    .navbar{
+        width: 90%;
+    }
     .main_container {
       gap: 3rem;
       .hero_content {
+        margin-top: 150px;
         flex-basis: 100%;
       }
 
@@ -84,6 +100,14 @@ const StyledHome = styled.div`
           height: auto;
           clip-path: none;
         }
+      }
+    }
+  }
+
+  @media (min-width: 640px) and (max-width: 1330px) {
+    .main_container {
+      .hero_content {
+        margin-top: 18%;
       }
     }
   }

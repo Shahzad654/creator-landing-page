@@ -8,79 +8,82 @@ import SideImage2 from "../assets/images/orange.png";
 
 export default function Features() {
   return (
-    <StyledFeatures>
-      <div className="feature_container">
-        <div className="feature">
-          <div className="feature_content">
+    <div id='features'>
+      <StyledFeatures>
+        <div className="feature_container">
+          <div className="feature">
+            <div className="feature_content">
+              <div className="image">
+                <img src={Image1} alt="" />
+              </div>
+
+              <div className="content">
+                <h3>Transform Recipes Effortlessly</h3>
+                <p>
+                  With BreakBread, creators can easily digitize their
+                  handwritten or typed recipes. Just snap a picture, and our
+                  advanced tools convert it into an interactive, shareable
+                  format. It’s never been this easy to modernize your cookbook.
+                </p>
+                <button>Digitize Recipes</button>
+              </div>
+            </div>
+
+            <div className="side_image">
+              <img src={SideImage2} alt="" />
+            </div>
+          </div>
+
+          <div className="feature2">
+            <div className="feature_content">
+              <div className="content">
+                <h3>Get new recipe ideas using AI</h3>
+                <p>
+                  Looking for fresh inspiration? BreakBread's AI generates
+                  custom recipes based on your preferences. Whether it’s
+                  gluten-free desserts, keto-friendly meals, or authentic global
+                  cuisines, give specific instructions, and let BreakBread do
+                  the magic.
+                </p>
+                <button>Generate AI Recipes</button>
+              </div>
+
+              <div className="image">
+                <img src={Image2} alt="" />
+              </div>
+            </div>
+
+            <div className="side_image">
+              <img src={SideImage} alt="" />
+            </div>
+          </div>
+
+          <div className="feature3">
             <div className="image">
-              <img src={Image1} alt="" />
+              <img src={Image3} alt="" />
             </div>
 
             <div className="content">
-              <h3>Transform Recipes Effortlessly</h3>
+              <h3>Share & Grow Your Culinary Passion</h3>
               <p>
-                With BreakBread, creators can easily digitize their handwritten
-                or typed recipes. Just snap a picture, and our advanced tools
-                convert it into an interactive, shareable format. It’s never
-                been this easy to modernize your cookbook.
+                Showcase your unique recipes on your personalized BreakBread
+                page. Share your love for food, engage with fans, and cultivate
+                a community of like-minded food enthusiasts. Watch your audience
+                grow as they savor your creations.
               </p>
-              <button>Digitize Recipes</button>
+              <button>Create My Profile</button>
             </div>
           </div>
-
-          <div className="side_image">
-            <img src={SideImage2} alt="" />
-          </div>
         </div>
-
-        <div className="feature2">
-          <div className="feature_content">
-            <div className="content">
-              <h3>Get new recipe ideas using AI</h3>
-              <p>
-                Looking for fresh inspiration? BreakBread's AI generates custom
-                recipes based on your preferences. Whether it’s gluten-free
-                desserts, keto-friendly meals, or authentic global cuisines,
-                give specific instructions, and let BreakBread do the magic.
-              </p>
-              <button>Generate AI Recipes</button>
-            </div>
-
-            <div className="image">
-              <img src={Image2} alt="" />
-            </div>
-          </div>
-
-          <div className="side_image">
-            <img src={SideImage} alt="" />
-          </div>
-        </div>
-
-        <div className="feature3">
-          <div className="image">
-            <img src={Image3} alt="" />
-          </div>
-
-          <div className="content">
-            <h3>Share & Grow Your Culinary Passion</h3>
-            <p>
-              Showcase your unique recipes on your personalized BreakBread page.
-              Share your love for food, engage with fans, and cultivate a
-              community of like-minded food enthusiasts. Watch your audience
-              grow as they savor your creations.
-            </p>
-            <button>Create My Profile</button>
-          </div>
-        </div>
-      </div>
-    </StyledFeatures>
+      </StyledFeatures>
+    </div>
   );
 }
 
 const StyledFeatures = styled.div`
   width: var(--section-width);
   /* height: var(--section-height); */
-  margin: var(--section-margin) auto var(--section-margin) auto;
+  margin: 160px auto var(--section-margin) auto;
 
   .feature_container {
     .feature {

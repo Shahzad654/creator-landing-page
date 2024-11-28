@@ -29,15 +29,20 @@ export default function Navbar() {
           {["Home", "Features", "FAQ's", "Contact"].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
-                <ListItemText primary={text} />
+                <a
+                  href={`#${text.toLowerCase()}`}
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  <ListItemText primary={text} />
+                </a>
               </ListItemButton>
             </ListItem>
           ))}
         </List>
         <Divider />
-       
       </Box>
     );
+
 
   return (
     <StyledNavbar>
@@ -45,8 +50,8 @@ export default function Navbar() {
         <img src={Logo} alt="" />
 
         <div className="nav_links">
-          <a href="">Home</a>
-          <a href="">Features</a>
+          <a href="#home">Home</a>
+          <a href="#features">Features</a>
           <a href="">FAQ's</a>
           <a href="">Contact</a>
         </div>
@@ -54,7 +59,7 @@ export default function Navbar() {
         <div className="mobile_navbar">
           <GiHamburgerMenu
             onClick={toggleDrawer(true)}
-            style={{ width: "25px", height: "25px", cursor: "pointer" }}
+            style={{ width: "30px", height: "30px", cursor: "pointer" }}
           />
           <Drawer open={open} onClose={toggleDrawer(false)} anchor="right">
             {DrawerList}
