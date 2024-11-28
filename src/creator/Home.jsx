@@ -29,7 +29,8 @@ export default function Home() {
 }
 
 const StyledHome = styled.div`
-  height: 100vh;
+  height: 600px;
+  overflow: hidden;
   position: relative;
 
   .navbar {
@@ -73,7 +74,8 @@ const StyledHome = styled.div`
       img {
         width: 100%;
         /* height: auto; */
-        height: 610px;
+        /* height: 610px; */
+        height: 600px;
         /* height: auto; */
         /* clip-path: polygon(67% 0, 100% 0, 100% 100%, 15% 100%); */
         object-fit: cover;
@@ -83,23 +85,29 @@ const StyledHome = styled.div`
   }
 
   @media (max-width: 750px) {
-    margin-bottom: 400px;
     .navbar {
       width: 90%;
     }
     .main_container {
       gap: 3rem;
       .hero_content {
-        margin-top: 150px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25%;
         flex-basis: 100%;
+        h2,p{
+            text-align: center;
+        }
       }
 
       .right_side {
         flex-basis: 100%;
         img {
-          width: 100%;
-          height: auto;
+          /* width: 100%;
+            height: auto; */
+          height: 200px;
           clip-path: none;
+          object-fit: contain;
         }
       }
     }
@@ -113,7 +121,7 @@ const StyledHome = styled.div`
     }
   }
 
-  @media (min-width: 1330px) {
+  /* @media (min-width: 1330px) {
     .main_container {
         .right_side{
             img{
@@ -122,5 +130,5 @@ const StyledHome = styled.div`
         }
     }
     
-  }
+  } */
 `;

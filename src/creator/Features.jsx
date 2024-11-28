@@ -90,10 +90,9 @@ export default function Features() {
 const StyledFeatures = styled.div`
   width: var(--section-width);
   /* height: var(--section-height); */
-  margin: var(--section-margin) auto var(--section-margin) auto;
+  margin: 150px auto var(--section-margin) auto;
   position: relative;
   .feature_container {
-    margin-top: var(--section-margin);
     .feature {
       .feature_content {
         display: flex;
@@ -119,6 +118,10 @@ const StyledFeatures = styled.div`
 
         .image {
           flex-basis: 45%;
+          width: 90%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           img {
             width: 90%;
             height: auto;
@@ -169,6 +172,10 @@ const StyledFeatures = styled.div`
 
         .image {
           flex-basis: 45%;
+          width: 80%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           position: relative;
           img {
             width: 80%;
@@ -217,6 +224,10 @@ const StyledFeatures = styled.div`
 
         .image {
           flex-basis: 45%;
+          width: 70%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           position: relative;
           img {
             width: 70%;
@@ -239,21 +250,53 @@ const StyledFeatures = styled.div`
   }
 
   @media (max-width: 640px) {
-  
     .feature_container {
       .feature {
         .feature_content {
           flex-direction: column;
+          gap: 4rem;
+          .content {
+            justify-content: center;
+            align-items: center;
+            h3 {
+              text-align: center;
+            }
+            p {
+              text-align: center;
+            }
+          }
         }
       }
       .feature3 {
         .feature_content {
           flex-direction: column;
+          gap: 4rem;
+          .content {
+            justify-content: center;
+            align-items: center;
+            h3 {
+              text-align: center;
+            }
+            p {
+              text-align: center;
+            }
+          }
         }
       }
       .feature2 {
         .feature_content {
           flex-direction: column-reverse;
+          gap: 4rem;
+          .content {
+            justify-content: center;
+            align-items: center;
+            h3 {
+              text-align: center;
+            }
+            p {
+              text-align: center;
+            }
+          }
         }
       }
     }
