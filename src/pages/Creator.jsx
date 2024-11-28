@@ -8,10 +8,10 @@ import Newletter from '../creator/Newletter'
 export default function Creator() {
   return (
     <>
-    <Navbar/>
+    {/* <Navbar/> */}
       <Home/>
       <Features/>
-      {/* <Newletter/> */}
+      <Newletter/>
     </>
   )
 }

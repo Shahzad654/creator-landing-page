@@ -1,47 +1,58 @@
 import React from 'react'
 import styled from 'styled-components'
-import Image1 from '../assets/image1.png'
-import Image2 from '../assets/image2.png'
-import Image3 from '../assets/image3.png'
-import SideImage from '../assets/sideimage1.png'
+import Image1 from '../assets/images/image1.png'
+import Image2 from '../assets/images/image2.png'
+import Image3 from '../assets/images/image3.png'
+import SideImage from '../assets/images/sideimage1.png'
+import SideImage2 from "../assets/images/orange.png";
 
 export default function Features() {
   return (
     <StyledFeatures>
       <div className="feature_container">
         <div className="feature">
-          <div className="image">
-            <img src={Image1} alt="" />
+          <div className="feature_content">
+            <div className="image">
+              <img src={Image1} alt="" />
+            </div>
+
+            <div className="content">
+              <h3>Transform Recipes Effortlessly</h3>
+              <p>
+                With BreakBread, creators can easily digitize their handwritten
+                or typed recipes. Just snap a picture, and our advanced tools
+                convert it into an interactive, shareable format. It’s never
+                been this easy to modernize your cookbook.
+              </p>
+              <button>Digitize Recipes</button>
+            </div>
           </div>
 
-          <div className="content">
-            <h3>Transform Recipes Effortlessly</h3>
-            <p>
-              With BreakBread, creators can easily digitize their handwritten or
-              typed recipes. Just snap a picture, and our advanced tools convert
-              it into an interactive, shareable format. It’s never been this
-              easy to modernize your cookbook.
-            </p>
-            <button>Digitize Recipes</button>
+          <div className="side_image">
+            <img src={SideImage2} alt="" />
           </div>
-
-         
         </div>
 
         <div className="feature2">
-          <div className="content">
-            <h3>Get new recipe ideas using AI</h3>
-            <p>
-              Looking for fresh inspiration? BreakBread's AI generates custom
-              recipes based on your preferences. Whether it’s gluten-free
-              desserts, keto-friendly meals, or authentic global cuisines, give
-              specific instructions, and let BreakBread do the magic.
-            </p>
-            <button>Generate AI Recipes</button>
+          <div className="feature_content">
+            <div className="content">
+              <h3>Get new recipe ideas using AI</h3>
+              <p>
+                Looking for fresh inspiration? BreakBread's AI generates custom
+                recipes based on your preferences. Whether it’s gluten-free
+                desserts, keto-friendly meals, or authentic global cuisines,
+                give specific instructions, and let BreakBread do the magic.
+              </p>
+              <button>Generate AI Recipes</button>
+            </div>
+
+            <div className="image">
+              <img src={Image2} alt="" />
+            </div>
           </div>
 
-          <div className="image">
-            <img src={Image2} alt="" />
+          <div className="side_image">
+            <img src={SideImage} alt="" />
           </div>
         </div>
 
@@ -68,73 +79,99 @@ export default function Features() {
 
 const StyledFeatures = styled.div`
   width: var(--section-width);
-  height: var(--section-height);
-  margin: auto;
+  /* height: var(--section-height); */
+  margin: var(--section-margin) auto var(--section-margin) auto;
 
   .feature_container {
     .feature {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-
-      .content {
+      .feature_content {
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
-        flex-basis: 45%;
-        gap: 1rem;
-        flex-direction: column;
-        p {
-          max-width: 120ch;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        .content {
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          flex-basis: 45%;
+          gap: 1rem;
+          flex-direction: column;
+          p {
+            max-width: 120ch;
+          }
+          button {
+            border-radius: var(--l-radius);
+          }
         }
-        button {
-          border-radius: var(--l-radius);
+
+        .image {
+          flex-basis: 45%;
+          img {
+            width: 100%;
+            height: auto;
+          }
         }
       }
 
-      .image {
-        flex-basis: 45%;
+      .side_image {
+        height: 50px;
         img {
-          width: 100%;
+          position: sticky;
+          left: 100%;
+          top: 50%;
+          width: 80px;
           height: auto;
         }
       }
-
     }
 
     .feature2 {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-      padding-top: 10%;
-
-      .content {
-        flex-basis: 45%;
+      .feature_content {
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
-        gap: 1rem;
-        flex-direction: column;
-        h3 {
-          max-width: 25ch;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        padding-top: 10%;
+
+        .content {
+          flex-basis: 45%;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          gap: 1rem;
+          flex-direction: column;
+          h3 {
+            max-width: 25ch;
+          }
+          p {
+            max-width: 60ch;
+          }
+          button {
+            background-color: var(--big-btn-color);
+            border-radius: var(--l-radius);
+          }
         }
-        p {
-          max-width: 60ch;
-        }
-        button {
-          background-color: var(--big-btn-color);
-          border-radius: var(--l-radius);
+
+        .image {
+          flex-basis: 45%;
+          position: relative;
+          img {
+            width: 100%;
+            height: auto;
+          }
         }
       }
 
-      .image {
-        flex-basis: 45%;
+      .side_image {
+        height: 50px;
         img {
-          width: 100%;
+          position: sticky;
+          left: 0;
+          top: 50%;
+          width: 80px;
           height: auto;
         }
       }
@@ -179,12 +216,18 @@ const StyledFeatures = styled.div`
 
   @media (max-width: 640px) {
     .feature_container {
-      .feature,
+      .feature {
+        .feature_content {
+          flex-direction: column;
+        }
+      }
       .feature3 {
         flex-direction: column;
       }
       .feature2 {
-        flex-direction: column-reverse;
+        .feature_content {
+          flex-direction: column-reverse;
+        }
       }
     }
   }

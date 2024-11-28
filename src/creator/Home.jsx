@@ -1,13 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import HeroImg from '../assets/HeroImage.jfif'
+import HeroImg from '../assets/images/HeroImage.jfif'
+import Navbar from './Navbar';
 
 export default function Home() {
   return (
-    <StyledHome>
-      <div className="main_container">
-      
-        
+    <>
+    <Navbar/>
+
+      <StyledHome>
+        <div className="main_container">
           <div className="hero_content">
             <h2>
               Bring your Recipes to Life, Build a Community around your Passion
@@ -18,18 +20,18 @@ export default function Home() {
             </p>
             <button>Subscribe to Newsletter</button>
           </div>
-        <div className="right_side">
-          <img src={HeroImg} alt="" />
+          <div className="right_side">
+            <img src={HeroImg} alt="" />
+          </div>
         </div>
-      </div>
-    </StyledHome>
+      </StyledHome>
+    </>
   );
 }
 
 const StyledHome = styled.div`
-  width: var(--section-width);
-  height: 100vh;
-  margin: auto;
+  /* width: var(--section-width); */
+  margin: var(--section-margin) auto var(--section-margin) auto;
   .main_container {
     display: flex;
     justify-content: space-between;
@@ -44,6 +46,7 @@ const StyledHome = styled.div`
       flex-basis: 45%;
       gap: 1rem;
       flex-direction: column;
+      padding-left: 5%;
       h2 {
         line-height: 2.5rem;
       }
@@ -63,6 +66,24 @@ const StyledHome = styled.div`
         width: 100%;
         height: auto;
         clip-path: polygon(67% 0, 100% 0, 100% 100%, 15% 100%);
+      }
+    }
+  }
+
+  @media (max-width: 640px) {
+    .main_container {
+      gap: 3rem;
+      .hero_content {
+        flex-basis: 100%;
+      }
+
+      .right_side {
+        flex-basis: 100%;
+        img {
+          width: 100%;
+          height: auto;
+          clip-path: none;
+        }
       }
     }
   }
