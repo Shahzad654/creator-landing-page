@@ -4,11 +4,12 @@ import Image1 from '../assets/images/image1.png'
 import Image2 from '../assets/images/image2.png'
 import Image3 from '../assets/images/image3.png'
 import SideImage from '../assets/images/sideimage1.png'
-import SideImage2 from "../assets/images/orange.png";
+import SideImage2 from "../assets/images/sideimage3.webp";
+import SideImage3 from "../assets/images/sideimage2.jpg";
 
 export default function Features() {
   return (
-    <div id='features'>
+    <div id="features">
       <StyledFeatures>
         <div className="feature_container">
           <div className="feature">
@@ -59,19 +60,25 @@ export default function Features() {
           </div>
 
           <div className="feature3">
-            <div className="image">
-              <img src={Image3} alt="" />
+            <div className="feature_content">
+              <div className="image">
+                <img src={Image3} alt="" />
+              </div>
+
+              <div className="content">
+                <h3>Share & Grow Your Culinary Passion</h3>
+                <p>
+                  Showcase your unique recipes on your personalized BreakBread
+                  page. Share your love for food, engage with fans, and
+                  cultivate a community of like-minded food enthusiasts. Watch
+                  your audience grow as they savor your creations.
+                </p>
+                <button>Create My Profile</button>
+              </div>
             </div>
 
-            <div className="content">
-              <h3>Share & Grow Your Culinary Passion</h3>
-              <p>
-                Showcase your unique recipes on your personalized BreakBread
-                page. Share your love for food, engage with fans, and cultivate
-                a community of like-minded food enthusiasts. Watch your audience
-                grow as they savor your creations.
-              </p>
-              <button>Create My Profile</button>
+            <div className="side_image">
+              <img src={SideImage3} alt="" />
             </div>
           </div>
         </div>
@@ -83,8 +90,8 @@ export default function Features() {
 const StyledFeatures = styled.div`
   width: var(--section-width);
   /* height: var(--section-height); */
-  margin: 160px auto var(--section-margin) auto;
-
+  margin: var(--section-margin) auto var(--section-margin) auto;
+  position: relative;
   .feature_container {
     .feature {
       .feature_content {
@@ -112,8 +119,9 @@ const StyledFeatures = styled.div`
         .image {
           flex-basis: 45%;
           img {
-            width: 100%;
+            width: 90%;
             height: auto;
+            transform: rotate(10deg);
           }
         }
       }
@@ -162,7 +170,7 @@ const StyledFeatures = styled.div`
           flex-basis: 45%;
           position: relative;
           img {
-            width: 100%;
+            width: 80%;
             height: auto;
           }
         }
@@ -171,46 +179,58 @@ const StyledFeatures = styled.div`
       .side_image {
         height: 50px;
         img {
-          position: sticky;
-          left: 0;
-          top: 50%;
-          width: 80px;
+          position: absolute;
+          left: -5%;
+          top: 65%;
+          width: 60px;
           height: auto;
         }
       }
     }
 
     .feature3 {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-      padding-top: 10%;
-
-      .content {
+      .feature_content {
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
-        flex-basis: 45%;
-        gap: 1rem;
-        flex-direction: column;
-        h3 {
-          max-width: 25ch;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        padding-top: 10%;
+        .content {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          flex-basis: 45%;
+          gap: 1rem;
+          flex-direction: column;
+          h3 {
+            max-width: 25ch;
+          }
+          p {
+            max-width: 55ch;
+          }
+          button {
+            border-radius: var(--l-radius);
+          }
         }
-        p {
-          max-width: 55ch;
-        }
-        button {
-          background-color: var(--big-btn-color);
-          border-radius: var(--l-radius);
+
+        .image {
+          flex-basis: 45%;
+          position: relative;
+          img {
+            width: 70%;
+            height: auto;
+          }
         }
       }
 
-      .image {
-        flex-basis: 45%;
+      .side_image {
+        height: 50px;
         img {
-          width: 100%;
+          position: absolute;
+          left: 100%;
+          top: 100%;
+          width: 60px;
           height: auto;
         }
       }
@@ -218,6 +238,7 @@ const StyledFeatures = styled.div`
   }
 
   @media (max-width: 640px) {
+  
     .feature_container {
       .feature {
         .feature_content {
@@ -225,7 +246,9 @@ const StyledFeatures = styled.div`
         }
       }
       .feature3 {
-        flex-direction: column;
+        .feature_content {
+          flex-direction: column;
+        }
       }
       .feature2 {
         .feature_content {

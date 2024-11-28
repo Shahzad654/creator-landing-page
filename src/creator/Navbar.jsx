@@ -78,11 +78,16 @@ const StyledNavbar = styled.div`
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+
+    img {
+      width: 10%;
+    }
+
     .nav_links {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 2rem;
+      gap: 4rem;
       a {
         font-weight: 600;
         color: var(--text-light-color);
@@ -99,7 +104,10 @@ const StyledNavbar = styled.div`
 
   @media (max-width: 640px) {
     .navbar {
-        width: 90%;
+      width: 90%;
+      img {
+        width: 15%;
+      }
       .mobile_navbar {
         display: block !important;
       }
@@ -108,4 +116,13 @@ const StyledNavbar = styled.div`
       }
     }
   }
+
+  @media (min-width: 640px) and (max-width: 1024px) {
+    .navbar{
+        img{
+            width: 15%;
+        }
+    }
+  }
+
 `;

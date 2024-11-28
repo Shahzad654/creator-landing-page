@@ -9,7 +9,6 @@ import Leg from "../assets/images/leg.svg";
 import Pasta from "../assets/images/pasta.svg";
 import Pizza from "../assets/images/pizza.svg";
 import Taco from "../assets/images/taco.svg";
-import Wrap from "../assets/images/wrap.svg";
 
 export default function Newletter() {
   return (
@@ -32,7 +31,6 @@ export default function Newletter() {
         <img src={Pasta} alt="Pasta" className="pasta" />
         <img src={Pizza} alt="Pizza" className="pizza" />
         <img src={Taco} alt="Taco" className="taco" />
-        <img src={Wrap} alt="Wrap" className="wrap" />
       </div>
     </StyledNewsletter>
   );
@@ -82,7 +80,7 @@ const StyledNewsletter = styled.div`
 
   .svg_background > img {
     position: absolute;
-    opacity: 0.8; 
+    opacity: 0.5; 
     max-width: 54px; 
   }
 
