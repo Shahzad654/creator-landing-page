@@ -93,6 +93,7 @@ const StyledFeatures = styled.div`
   margin: var(--section-margin) auto var(--section-margin) auto;
   position: relative;
   .feature_container {
+    margin-top: var(--section-margin);
     .feature {
       .feature_content {
         display: flex;
