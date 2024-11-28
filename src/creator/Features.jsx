@@ -92,6 +92,7 @@ const StyledFeatures = styled.div`
   /* height: var(--section-height); */
   margin: 150px auto var(--section-margin) auto;
   position: relative;
+  scroll-behavior: smooth;
   .feature_container {
     .feature {
       .feature_content {
@@ -133,8 +134,8 @@ const StyledFeatures = styled.div`
       .side_image {
         height: 50px;
         img {
-          position: sticky;
-          left: 100%;
+          position: absolute;
+          right: -5%;
           top: 50%;
           width: 80px;
           height: auto;
@@ -264,6 +265,11 @@ const StyledFeatures = styled.div`
             p {
               text-align: center;
             }
+          }
+        }
+        .side_image {
+          img {
+            top: 30%;
           }
         }
       }

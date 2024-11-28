@@ -71,6 +71,7 @@ export default function Navbar() {
 }
 
 const StyledNavbar = styled.div`
+  
   .navbar {
     width: 50%;
     padding-left: 4%;
@@ -90,6 +91,7 @@ const StyledNavbar = styled.div`
       gap: 4rem;
       a {
         font-weight: 600;
+        scroll-behavior: smooth;
         color: var(--text-light-color);
         &:hover {
           color: var(--primary-color);
@@ -118,11 +120,10 @@ const StyledNavbar = styled.div`
   }
 
   @media (min-width: 640px) and (max-width: 1024px) {
-    .navbar{
-        img{
-            width: 15%;
-        }
+    .navbar {
+      img {
+        width: 15%;
+      }
     }
   }
-
 `;
