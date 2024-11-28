@@ -33,8 +33,8 @@ const StyledHome = styled.div`
   /* margin: var(--section-margin) auto var(--section-margin) auto; */
   position: relative;
   .navbar {
-    width: 50%; 
-    position: absolute; 
+    width: 50%;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 10;
@@ -77,14 +77,14 @@ const StyledHome = styled.div`
         /* height: auto; */
         height: 500px;
         /* clip-path: polygon(67% 0, 100% 0, 100% 100%, 15% 100%); */
-        clip-path: polygon(51% 0, 100% 0, 100% 100%, 14% 100%);
+        clip-path: polygon(44% 0, 100% 0, 100% 100%, 3% 100%);
       }
     }
   }
 
   @media (max-width: 640px) {
-    .navbar{
-        width: 90%;
+    .navbar {
+      width: 90%;
     }
     .main_container {
       gap: 3rem;
